@@ -1,0 +1,12 @@
+.red:disabled,
+.red[disabled] {
+    color: 'red'!important;
+}
+
+.green:disabled {
+    color: 'green';
+}
+
+.grey:disabled {
+    color: 'grey';
+}
