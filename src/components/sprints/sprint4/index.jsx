@@ -206,7 +206,7 @@ const Sprint4 = () => {
                 ))}
             </div>
             <div className="visuals">
-                <MiniBrowser exampleCode={{ html: "sdkjfh", css: "skjdgh" }} />
+                {/* <MiniBrowser exampleCode={{ html: "sdkjfh", css: "skjdgh" }} /> */}
             </div>
         </div>
     );

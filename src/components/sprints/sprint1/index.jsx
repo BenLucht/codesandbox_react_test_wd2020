@@ -21,7 +21,16 @@ const content = [
         },
         {
             type: "p",
-            content: `The results of the previous sprint gave us an idea, how our website will be structured and what it will look like later. Now, we will start writing code. At the end of this “Sprint” you will have the layout of your website in HTML and CSS with one question displayed. While it sounds like a lot in the beginning, you will be surprised how quickly you will have your basic layout in HTML. Let’s get started by creating an HTML document. Every HTML document has the same basic structure, from which you will start filling in your own content and data:`,
+            content: [
+                {
+                    type: "text",
+                    content: `The results of the previous sprint gave us an idea, how our website will be structured and what it will look like later. Now, we will start writing code. At the end of this “Sprint” you will have the layout of your website in HTML and CSS with one question displayed. While it sounds like a lot in the beginning, you will be surprised how quickly you will have your basic layout in HTML. Let’s get started by creating an HTML document. Every HTML document has the same basic structure, from which you will start filling in your own content and data:`,
+                },
+                {
+                    type: "custom",
+                    content: <img src={image1} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                }
+            ]
         },
         {
             type: "p",
@@ -230,7 +239,11 @@ const content = [
                     type: "text",
                     content: `. Here is the result:`,
                 },
-            ],
+                {
+                    type: "custom",
+                    content: <img src={image2} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                }
+            ]
         },
         {
             type: "img",
@@ -396,7 +409,16 @@ const content = [
         },
         {
             type: "p",
-            content: `We won’t go into everything here, because going into detail for each and everything would be too much for this guide. But a few things we want to point out:`,
+            content: [
+                {
+                    type: "text",
+                    content: `We won’t go into everything here, because going into detail for each and everything would be too much for this guide. But a few things we want to point out:`,
+                },
+                {
+                    type: "custom",
+                    content: <img src={image3} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                }
+            ]
         },
         {
             type: "ul",
@@ -479,9 +501,9 @@ const Sprint1 = () => {
                 ))}
             </div>
             <div className="visuals">
-                <img src={image1} alt="wireframe" style={{ width: "40vw", top: "15vh", position: "relative" }} />
+                {/* <img src={image1} alt="wireframe" style={{ width: "40vw", top: "15vh", position: "relative" }} />
                 <img src={image2} alt="wireframe" style={{ width: "40vw", top: "65vh", position: "relative" }} />
-                <img src={image3} alt="wireframe" style={{ width: "40vw", top: "125vh", position: "relative" }} />
+                <img src={image3} alt="wireframe" style={{ width: "40vw", top: "125vh", position: "relative" }} /> */}
             </div>
         </div>
     );

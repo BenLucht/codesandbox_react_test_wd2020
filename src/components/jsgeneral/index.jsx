@@ -7,6 +7,7 @@ import '../sprints/style.css';
 
 import imageConsole1 from "./images/overviewjs1.png";
 import imageConsole2 from "./images/console_example.png";
+import image1 from "./images/undraw_startup_life_2du2.png";
 // import image2 from "./images/undraw_faq_rjoy.png";
 
 const example1HTML = `<input type="text" id="a" />
@@ -75,7 +76,16 @@ const content = [
         },
         {
             type: "p",
-            content: `While JavaScript is a quirky and not highly performant by itself, nor fully featured programming language, it is the standard programming language of the web. It is in fact the only programming language supported by all widely available browsers - besides WebAssembly, but that is a topic for after your computer science degree. So why is JavaScript the industry standard even though it is far from perfect? The answer is simple and difficult all at once, but here is a brief run down of how things happened: When the internet was still rather young, there were a lot of competitors in the market of how to deliver content to the user. Microsoft was already a powerhouse in the early 1990s, but they did not jump onto the new trend quickly enough. The industry leader in browser technology at the time was a company called Netscape with their product Netscape Navigator. At the time, the internet mostly featured static content, but the rise of graphical user interfaces introduced new possibilities to users and developers alike. Competitors tried to establish existing programming languages as options in the market, but the limitations of the web at the time and the potential for harm by using an unrestricted gateway into users computers curbed their efforts. Brendan Eich, a Netscape employee in 1995, then developed Mocha, a limited capability language that was easy to use and implement in the Netscape browser. Microsoft, having caught up to the times, tried to gain control over the emerging technology and introduced Internet Explorer, complete with their implementation of VisualBasic (the same language still haunting Excel programmers to this day). In order to withstand the force that was Microsoft, Netscape had to partner up with a comparably established company and found it in Sun Microsystems. Sun had developed and established Java, at the time one of the most advanced programming languages and software development systems (Oracle, which bought Sun in 2010, claims that Java runs on more than 3 billion devices today, Googles Android operating system is based on Java, as are many popular applications). They saw this as a double opportunity to stand up to Microsoft as well as establishing themselves in the internet business, so a cooperation arrangement was formed, resulting in Mocha being renamed JavaScript and pushed by the two companies as the web standard. It is interesting to note that JavaScript has little in common with Java, the naming was more of a marketing tool than actual substance.`,
+            content: [
+                {
+                    type: "text",
+                    content: `While JavaScript is a quirky and not highly performant by itself, nor fully featured programming language, it is the standard programming language of the web. It is in fact the only programming language supported by all widely available browsers - besides WebAssembly, but that is a topic for after your computer science degree. So why is JavaScript the industry standard even though it is far from perfect? The answer is simple and difficult all at once, but here is a brief run down of how things happened: When the internet was still rather young, there were a lot of competitors in the market of how to deliver content to the user. Microsoft was already a powerhouse in the early 1990s, but they did not jump onto the new trend quickly enough. The industry leader in browser technology at the time was a company called Netscape with their product Netscape Navigator. At the time, the internet mostly featured static content, but the rise of graphical user interfaces introduced new possibilities to users and developers alike. Competitors tried to establish existing programming languages as options in the market, but the limitations of the web at the time and the potential for harm by using an unrestricted gateway into users computers curbed their efforts. Brendan Eich, a Netscape employee in 1995, then developed Mocha, a limited capability language that was easy to use and implement in the Netscape browser. Microsoft, having caught up to the times, tried to gain control over the emerging technology and introduced Internet Explorer, complete with their implementation of VisualBasic (the same language still haunting Excel programmers to this day). In order to withstand the force that was Microsoft, Netscape had to partner up with a comparably established company and found it in Sun Microsystems. Sun had developed and established Java, at the time one of the most advanced programming languages and software development systems (Oracle, which bought Sun in 2010, claims that Java runs on more than 3 billion devices today, Googles Android operating system is based on Java, as are many popular applications). They saw this as a double opportunity to stand up to Microsoft as well as establishing themselves in the internet business, so a cooperation arrangement was formed, resulting in Mocha being renamed JavaScript and pushed by the two companies as the web standard. It is interesting to note that JavaScript has little in common with Java, the naming was more of a marketing tool than actual substance.`,
+                },
+                {
+                    type: "custom",
+                    content: <img src={image1} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                }
+            ]
         },
         {
             type: "p",
@@ -221,7 +231,28 @@ const content = [
         {
             type: "p",
             content: `And here we are, working calculator in a website and all, ready to conquer the world with our website ideas! Or at least for the next step in our quiz project.`,
-        }
+        },
+        {
+            type: "h3",
+            content: `Further Reading`,
+        },
+        {
+            type: "ul",
+            content: [
+                {
+                    type: "li",
+                    content: <a target="_blank" rel="noopener noreferrer" href="https://javascript.info/intro">https://javascript.info/intro</a>,
+                },
+                {
+                    type: "li",
+                    content: <a target="_blank" rel="noopener noreferrer" href="https://skillcrush.com/blog/javascript/">https://skillcrush.com/blog/javascript/</a>,
+                },
+                {
+                    type: "li",
+                    content: <a target="_blank" rel="noopener noreferrer" href="https://medium.com/@benastontweet/lesson-1a-the-history-of-javascript-8c1ce3bffb17">https://medium.com/@benastontweet/lesson-1a-the-history-of-javascript-8c1ce3bffb17</a>,
+                },
+            ],
+        },
     ],
     [],
     [],

@@ -14,7 +14,16 @@ const content = [
         },
         {
             type: "p",
-            content: `In this Sprint we want you to familiarize yourself with the project idea. We provided an exemplary quiz, but there are many ways to implement the same idea. The positioning of the button, the design of the boxes, font-family, website behaviour, feature elements, … All of this is totally up to you. Once you create a sketch, future development will get so much easier. And just because you decide to go with a specific design in the beginning doesn’t mean you can’t change it later. Take your time to iterate over some ideas.`,
+            content: [
+                {
+                    type: "text",
+                    content: `In this Sprint we want you to familiarize yourself with the project idea. We provided an exemplary quiz, but there are many ways to implement the same idea. The positioning of the button, the design of the boxes, font-family, website behaviour, feature elements, … All of this is totally up to you. Once you create a sketch, future development will get so much easier. And just because you decide to go with a specific design in the beginning doesn’t mean you can’t change it later. Take your time to iterate over some ideas.`,
+                },
+                {
+                    type: "custom",
+                    content: <img src={image1} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                }
+            ]
         },
         // {
         //     type: "design-img",
@@ -70,7 +79,16 @@ const content = [
         },
         {
             type: "p",
-            content: `Before ending this “Sprint”, a quick note: We didn’t go much into detail about how specific elements should look like except for colour changes when clicking answers. You can also add design notes to your sketch, like background colour, box-shadow (we will see what this is later!), or more. We went for a minimalistic approach though.`,
+            content: [
+                {
+                    type: "text",
+                    content: `Before ending this “Sprint”, a quick note: We didn’t go much into detail about how specific elements should look like except for colour changes when clicking answers. You can also add design notes to your sketch, like background colour, box-shadow (we will see what this is later!), or more. We went for a minimalistic approach though.`,
+                },
+                {
+                    type: "custom",
+                    content: <img src={image2} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                }
+            ]
         },
         {
             type: "p",
@@ -139,8 +157,8 @@ const Sprint0 = () => {
                 ))}
             </div>
             <div className="visuals">
-                <img src={image1} alt="wireframe" style={{ width: "40vw", top: "15vh", position: "relative" }} />
-                <img src={image2} alt="wireframe" style={{ width: "40vw", top: "75vh", position: "relative" }} />
+                {/* <img src={image1} alt="wireframe" style={{ width: "40vw", top: "15vh", position: "relative" }} /> */}
+                {/* <img src={image2} alt="wireframe" style={{ width: "40vw", top: "75vh", position: "relative" }} /> */}
             </div>
         </div>
     );

@@ -5,10 +5,10 @@ import image1 from "./images/undraw_hacker_mind_6y85.png";
 import image2 from "./images/undraw_developer_activity_bv83.png";
 import image3 from "./images/undraw_programmer_imem.png";
 import image4 from "./images/undraw_code_review_l1q9.png";
-import image5 from "./images/undraw_pair_programming_njlp.png";
 
 
 import '../style.css';
+
 
 const content = [
     [
@@ -37,13 +37,17 @@ const content = [
                     type: "text",
                     content: ` tag:`,
                 },
+                {
+                    type: "custom",
+                    content: <img src={image1} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                }
             ]
         },
         {
             type: "p",
             content: [
                 {
-                    type: "tagged",
+                    type: "code",
                     content: `<script type="text/javascript" src="quiz.js"></script>`,
                 }
             ]
@@ -56,7 +60,7 @@ const content = [
             type: "p",
             content: [
                 {
-                    type: "tagged",
+                    type: "code",
                     content: `alert(“Hello”);`,
                 }
             ]
@@ -88,7 +92,7 @@ const content = [
         },
         {
             type: "h3",
-            content: `1. Display an alert upon clicking an answer-button and let it show which button was clicked`,
+            content: `Display an alert upon clicking an answer-button and let it show which button was clicked`,
         },
         {
             type: "p",
@@ -139,24 +143,34 @@ const content = [
             type: "p",
             content: [
                 {
-                    type: "tagged",
+                    type: "code",
                     content: `var options = document.getElementsByClassName(“option”);
-                    console.log(options);
-                    `,
+console.log(options);`,
                 }
             ],
         },
         {
             type: "p",
-            content: `We saved our query result to the variable options, because it will allow us to work with it later. We also added console.log(), so we can see what the results are when accessing the developer console of your browser. As we can see there, options is a list (or “HTMLCollection”) consisting of four elements. All we have to do now is iterate over this list and add a “click” event each time. You probably know the for-loop by now. The most common for-loop looks something like this:`,
+            content: [
+                {
+                    type: "text",
+                    content: `We saved our query result to the variable options, because it will allow us to work with it later. We also added console.log(), so we can see what the results are when accessing the developer console of your browser. As we can see there, options is a list (or “HTMLCollection”) consisting of four elements. All we have to do now is iterate over this list and add a “click” event each time. You probably know the for-loop by now. The most common for-loop looks something like this:`,
+                },
+                {
+                    type: "custom",
+                    content: <img src={image2} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                }
+            ]
         },
         {
             type: "p",
             content: [
                 {
-                    type: "tagged",
-                    content: `for(var i = 0; i <= options.length; i++) { //some code };`,
-                }
+                    type: "code",
+                    content: `for(var i = 0; i <= options.length; i++) {
+    //some code 
+};`,
+                },
             ],
         },
         {
@@ -167,8 +181,10 @@ const content = [
             type: "p",
             content: [
                 {
-                    type: "tagged",
-                    content: `for(let option of options) { //some code };`,
+                    type: "code",
+                    content: `for(let option of options) { 
+    //some code
+};`,
                 }
             ]
         },
@@ -201,13 +217,12 @@ const content = [
             type: "p",
             content: [
                 {
-                    type: "tagged",
+                    type: "code",
                     content: `for(let option of options) {
-                        option.addEventListener("click", function(e) {
-                                console.log(option);
-                          });
-                    };
-                    `,
+    option.addEventListener("click", function(e) {
+            console.log(option);
+        });
+};`,
                 }
             ]
         },
@@ -236,14 +251,13 @@ const content = [
             type: "p",
             content: [
                 {
-                    type: "tagged",
+                    type: "code",
                     content: `for(let option of options) {
-                        option.addEventListener("click", function(e) {
-                               var givenAnswer = e.target.innerText;
-                                alert(givenAnswer);
-                          });
-                    };
-                    `,
+    option.addEventListener("click", function(e) {
+            var givenAnswer = e.target.innerText;
+            alert(givenAnswer);
+        });
+};`,
                 }
             ]
         },
@@ -253,7 +267,7 @@ const content = [
         },
         {
             type: "h3",
-            content: `2. Deactivate the buttons once one of them was clicked`,
+            content: `Deactivate the buttons once one of them was clicked`,
         },
         {
             type: "p",
@@ -261,13 +275,22 @@ const content = [
         },
         {
             type: "p",
-            content: `A different approach would be to track which questions have been answered and only if a question hasn’t been answered we will trigger our functionality. We will go with the latter. To track which questions have been answered, we want to introduce a data format called JSON. You’ve seen it before when we provided the example question. JSON is a very simple format, where the data is stored in so called key-value-pairs:`,
+            content: [
+                {
+                    type: "text",
+                    content: `A different approach would be to track which questions have been answered and only if a question hasn’t been answered we will trigger our functionality. We will go with the latter. To track which questions have been answered, we want to introduce a data format called JSON. You’ve seen it before when we provided the example question. JSON is a very simple format, where the data is stored in so called key-value-pairs:`,
+                },
+                {
+                    type: "custom",
+                    content: <img src={image3} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                }
+            ]
         },
         {
             type: "p",
             content: [
                 {
-                    type: "tagged",
+                    type: "code",
                     content: `var data = {key: “value”}`,
                 }
             ]
@@ -301,17 +324,16 @@ const content = [
             type: "p",
             content: [
                 {
-                    type: "tagged",
+                    type: "code",
                     content: `var options = document.getElementsByClassName(“option”);
-                    var score = {};
-                    
-                    for(let option of options) {
-                        option.addEventListener("click", function(e) {
-                               var givenAnswer = e.target.innerText;
-                                alert(givenAnswer);
-                          });
-                    };
-                    `,
+var score = {};
+
+for(let option of options) {
+    option.addEventListener("click", function(e) {
+            var givenAnswer = e.target.innerText;
+            alert(givenAnswer);
+        });
+};`,
                 }
             ]
         },
@@ -323,18 +345,17 @@ const content = [
             type: "p",
             content: [
                 {
-                    type: "tagged",
+                    type: "code",
                     content: `for(let option of options) {
-                        option.addEventListener("click", function(e) {
-                               var givenAnswer = e.target.innerText;
-                    
-                            if(score[1] == null) {
-                                    alert(givenAnswer);
-                                score[1] = “answered”;
-                            }
-                          });
-                    };
-                    `,
+    option.addEventListener("click", function(e) {
+            var givenAnswer = e.target.innerText;
+
+        if(score[1] == null) {
+                alert(givenAnswer);
+            score[1] = “answered”;
+        }
+        });
+};`,
                 }
             ]
         },
@@ -348,7 +369,16 @@ const content = [
         },
         {
             type: "p",
-            content: `Next step: find out if the given answer is correct. How can we compare it? Well, we know that the correct answer is “Water”. Therefore we can create a variable that holds the correct answer and then compare it with the given answer, which we currently alert to the user. When the given answer is the same as the correct answer, we will highlight our button green, otherwise red.`,
+            content: [
+                {
+                    type: "text",
+                    content: `Next step: find out if the given answer is correct. How can we compare it? Well, we know that the correct answer is “Water”. Therefore we can create a variable that holds the correct answer and then compare it with the given answer, which we currently alert to the user. When the given answer is the same as the correct answer, we will highlight our button green, otherwise red.`,
+                },
+                {
+                    type: "custom",
+                    content: <img src={image4} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                }
+            ]
         },
         {
             type: "h3",
@@ -402,11 +432,11 @@ const Sprint2 = () => {
                 ))}
             </div>
             <div className="visuals">
-                <img src={image1} alt="wireframe" style={{ width: "40vw", top: "15vh", position: "relative" }} />
+                {/* <img src={image1} alt="wireframe" style={{ width: "40vw", top: "15vh", position: "relative" }} />
                 <img src={image2} alt="wireframe" style={{ width: "40vw", top: "85vh", position: "relative" }} />
                 <img src={image3} alt="wireframe" style={{ width: "40vw", top: "145vh", position: "relative" }} />
                 <img src={image4} alt="wireframe" style={{ width: "40vw", top: "200vh", position: "relative" }} />
-                <img src={image5} alt="wireframe" style={{ width: "40vw", top: "255vh", position: "relative" }} />
+                <img src={image5} alt="wireframe" style={{ width: "40vw", top: "255vh", position: "relative" }} /> */}
             </div>
         </div>
     );

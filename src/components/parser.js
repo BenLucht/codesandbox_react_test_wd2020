@@ -53,6 +53,11 @@ const parser = ({ type, content }) => {
                                                 );
                                         case "custom":
                                             return element.content;
+                                        case "code":
+                                                return (
+                                                    <div className="tag" style={{ whiteSpace: "pre-wrap", fontSize: "1.1rem", marginLeft: "5%", maxWidth: "85%", display: "inline-flex", padding: "1.5rem" }}>
+                                                        {element.content}</div>
+                                                );
                                         default:
                                             return null;
                                         }
@@ -108,6 +113,11 @@ const parser = ({ type, content }) => {
             );
         case "custom":
             return content;
+        case "code":
+            return (
+                <p className="tag" style={{ whiteSpace: "pre-wrap", width: "80%", padding: "1rem" }}>
+                    {content}</p>
+            );
         default:
             return null;
     };

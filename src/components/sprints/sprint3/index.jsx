@@ -3,6 +3,9 @@ import parser from '../../parser';
 
 import '../style.css';
 
+import image1 from "./images/undraw_pair_programming_njlp.png";
+import image2 from "./images/undraw_code_review_l1q9.png";
+
 const content = [
     [
         {
@@ -17,7 +20,16 @@ const content = [
         },
         {
             type: "p",
-            content: `Welcome to “Sprint 3”. Let us recap what we have done so far. We created a simple layout, added some style to it and some interactions. Up until this point, all of our content was placed in our HTML file. Static websites like this are good when you always want to display the same content, like info pages. But what if we want to display different questions when loading the page? It gets boring answering the same question over and over again. Now, we will take this hard coded content and use it in JavaScript as a blueprint to dynamically generate a question and display it in our HTML. You heard correctly, we will create HTML content with JavaScript!`,
+            content: [
+                {
+                    type: "text",
+                    content: `Welcome to “Sprint 3”. Let us recap what we have done so far. We created a simple layout, added some style to it and some interactions. Up until this point, all of our content was placed in our HTML file. Static websites like this are good when you always want to display the same content, like info pages. But what if we want to display different questions when loading the page? It gets boring answering the same question over and over again. Now, we will take this hard coded content and use it in JavaScript as a blueprint to dynamically generate a question and display it in our HTML. You heard correctly, we will create HTML content with JavaScript!`,
+                },
+                {
+                    type: "custom",
+                    content: <img src={image1} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                }
+            ]
         },
         {
             type: "p",
@@ -88,7 +100,7 @@ const content = [
             type: "p",
             content: [
                 {
-                    type: "tagged",
+                    type: "code",
                     content: `sgkjdhsdkjghksjhdg
                         `,
                 }
@@ -102,16 +114,15 @@ const content = [
             type: "p",
             content: [
                 {
-                    type: "tagged",
+                    type: "code",
                     content: `{
-                        category: "Science & Nature",
-                        type: "multiple",
-                        difficulty: "easy",
-                        question: "71% of the Earth’s surface is made up of",
-                        correct_answer: "Water",
-                        incorrect_answers: ["Deserts", "Continents", "Forests"]
-                        }
-                        `,
+    category: "Science & Nature",
+    type: "multiple",
+    difficulty: "easy",
+    question: "71% of the Earth’s surface is made up of",
+    correct_answer: "Water",
+    incorrect_answers: ["Deserts", "Continents", "Forests"]
+}`,
                 }
             ]
         },
@@ -143,7 +154,16 @@ const content = [
         },
         {
             type: "p",
-            content: `Awesome. Take a look at what you have created so far! If you have questions or your code doesn’t work as you wish, don’t hesitate to contact your mentor or ask in our Slack group! The next “Sprint” will add more questions to your quiz. And if you really want to take your JavaScript skills to the next level, you will get a first glimpse at working with APIs.`,
+            content: [
+                {
+                    type: "text",
+                    content: `Awesome. Take a look at what you have created so far! If you have questions or your code doesn’t work as you wish, don’t hesitate to contact your mentor or ask in our Slack group! The next “Sprint” will add more questions to your quiz. And if you really want to take your JavaScript skills to the next level, you will get a first glimpse at working with APIs.`,
+                },
+                {
+                    type: "custom",
+                    content: <img src={image2} alt="img" style={{ position: "absolute", left: "0", top: "-300px", width: "100%", transform: "translateX(47vw)" }} />,
+                }
+            ]
         },
         {
             type: "milestone",
