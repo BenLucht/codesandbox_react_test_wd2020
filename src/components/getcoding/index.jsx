@@ -259,7 +259,6 @@ const GetCoding = () => {
                 className="sprint0__container" 
             >
                 <p>
-                    sdkjfhdsjh
                     <img className="wireframe_undraw_player" src={undrawHtmlCss} />
                 </p>
                 <h3>

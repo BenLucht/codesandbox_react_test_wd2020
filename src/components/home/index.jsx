@@ -9,7 +9,7 @@ import '../../style.css';
 const tasks = [
     {
         sprint: "",
-        link: "/guide",
+        link: "/general",
         title: "General Information",
         content: []
     },

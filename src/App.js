@@ -7,6 +7,7 @@ import mainLogo from'./logo.png';
 
 import Home from './components/home';
 import LoadingScreen from './components/loadingscreen';
+const General = React.lazy(() => import('./components/general'));
 const Planning = React.lazy(() => import('./components/planning'));
 const GetCoding = React.lazy(() => import('./components/getcoding'));
 const JSGeneral = React.lazy(() => import('./components/jsgeneral'));
@@ -37,6 +38,7 @@ function App() {
         <Suspense fallback={<LoadingScreen />}>
           <Switch>       
             <Route exact path="/" component={Home} />
+            <Route exact path="/general" component={General} />
             <Route exact path="/planning" component={Planning} />
             <Route exact path="/getcoding" component={GetCoding} />
             <Route exact path="/jsgeneral" component={JSGeneral} />
