@@ -12,6 +12,8 @@ const parser = ({ type, content }) => {
             return <><h1>{content}</h1><br /></>;
         case "h3":
             return <h3>{content}</h3>;
+        case "h4":
+            return <h4>{content}</h4>;
         // case "p":
         //     return <p>{content}</p>;
         case "p":
