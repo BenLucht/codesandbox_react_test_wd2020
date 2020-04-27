@@ -8,24 +8,24 @@ import mainLogo from'./logo.png';
 
 import Home from './components/home';
 import LoadingScreen from './components/loadingscreen';
-// import General from './components/general';
-// import Planning from './components/planning';
-// import GetCoding from './components/getcoding';
-// import JSGeneral from './components/jsgeneral';
-// import Sprint0 from './components/sprints/sprint0';
-// import Sprint1 from './components/sprints/sprint1';
-// import Sprint2 from './components/sprints/sprint2';
-// import Sprint3 from './components/sprints/sprint3';
-// import Sprint4 from './components/sprints/sprint4';
-const General = React.lazy(() => import('./components/general'));
-const Planning = React.lazy(() => import('./components/planning'));
-const GetCoding = React.lazy(() => import('./components/getcoding'));
-const JSGeneral = React.lazy(() => import('./components/jsgeneral'));
-const Sprint0 = React.lazy(() => import('./components/sprints/sprint0'));
-const Sprint1 = React.lazy(() => import('./components/sprints/sprint1'));
-const Sprint2 = React.lazy(() => import('./components/sprints/sprint2'));
-const Sprint3 = React.lazy(() => import('./components/sprints/sprint3'));
-const Sprint4 = React.lazy(() => import('./components/sprints/sprint4'));
+import General from './components/general';
+import Planning from './components/planning';
+import GetCoding from './components/getcoding';
+import JSGeneral from './components/jsgeneral';
+import Sprint0 from './components/sprints/sprint0';
+import Sprint1 from './components/sprints/sprint1';
+import Sprint2 from './components/sprints/sprint2';
+import Sprint3 from './components/sprints/sprint3';
+import Sprint4 from './components/sprints/sprint4';
+// const General = React.lazy(() => import('./components/general'));
+// const Planning = React.lazy(() => import('./components/planning'));
+// const GetCoding = React.lazy(() => import('./components/getcoding'));
+// const JSGeneral = React.lazy(() => import('./components/jsgeneral'));
+// const Sprint0 = React.lazy(() => import('./components/sprints/sprint0'));
+// const Sprint1 = React.lazy(() => import('./components/sprints/sprint1'));
+// const Sprint2 = React.lazy(() => import('./components/sprints/sprint2'));
+// const Sprint3 = React.lazy(() => import('./components/sprints/sprint3'));
+// const Sprint4 = React.lazy(() => import('./components/sprints/sprint4'));
 
 
 function App() {
@@ -48,11 +48,8 @@ function App() {
       </header>
       <div style={{ marginTop: "85px", backgroundColor: "fefefa" }}>
           <AnimatePresence exitBeforeEnter>
-            <Suspense fallback={<LoadingScreen />}>
-                <Switch location={location} key={location.pathname}>  
-                <motion.div
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5, type: "tween" }}>
+            {/* <Suspense fallback={<LoadingScreen />}> */}
+                <Switch location={location}>  
                   <Route exact path="/" component={Home} />
                   <Route exact path="/general" component={General} />
                   <Route exact path="/planning" component={Planning} />
@@ -63,9 +60,8 @@ function App() {
                   <Route exact path="/sprint2" component={Sprint2} />
                   <Route exact path="/sprint3" component={Sprint3} />
                   <Route exact path="/sprint4" component={Sprint4} />
-                </motion.div>     
                 </Switch>
-            </Suspense>
+            {/* </Suspense> */}
           </AnimatePresence>
       </div>
     </div>

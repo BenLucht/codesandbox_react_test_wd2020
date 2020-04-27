@@ -191,9 +191,9 @@ const Home = () => {
                 }
             </motion.div>
             <motion.div
-                initial={{ x: "20vw" }}
-                animate={{ x: 0 }}
-                exit={{ x: "20vw" }}
+                initial={{ x: "20vw", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: "20vw", opacity: 0 }}
                 transition={{ duration: 0.3, type: "tween" }}
                 style={{ position: "relative", gridColumn: "2 / 3", }}>
                 <Quiz />

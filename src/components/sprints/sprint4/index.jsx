@@ -1,6 +1,7 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 // import ReactJson from 'react-json-view';
-
+/* <LazyLoad height={400} offset={100}></LazyLoad> */
 // import MiniBrowser from './MiniBrowser';
 import parser from '../../parser';
 

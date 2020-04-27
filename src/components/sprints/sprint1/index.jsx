@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 import parser from '../../parser';
 
 import image1 from "./images/undraw_feeling_proud_qne1.png";
@@ -28,7 +29,7 @@ const content = [
                 },
                 {
                     type: "custom",
-                    content: <img src={image1} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                    content: <LazyLoad height={400} offset={100}><img src={image1} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} /></LazyLoad>,
                 }
             ]
         },
@@ -241,7 +242,7 @@ const content = [
                 },
                 {
                     type: "custom",
-                    content: <img src={image2} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                    content: <LazyLoad height={400} offset={100}><img src={image2} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} /></LazyLoad>,
                 }
             ]
         },
@@ -416,7 +417,7 @@ const content = [
                 },
                 {
                     type: "custom",
-                    content: <img src={image3} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                    content: <LazyLoad height={400} offset={100}><img src={image3} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} /></LazyLoad>,
                 }
             ]
         },

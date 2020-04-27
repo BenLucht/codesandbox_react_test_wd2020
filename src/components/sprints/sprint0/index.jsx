@@ -1,10 +1,13 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 import parser from '../../parser';
 
 import '../style.css';
 
 import image1 from "./images/undraw_build_wireframe_u9m2.png";
 import image2 from "./images/undraw_faq_rjoy.png";
+// const image1 = React.lazy(() => import('./images/undraw_build_wireframe_u9m2.png'));
+// const image2 = React.lazy(() => import('./images/undraw_faq_rjoy.png'));
 
 const content = [
     [
@@ -21,7 +24,7 @@ const content = [
                 },
                 {
                     type: "custom",
-                    content: <img src={image1} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                    content: <LazyLoad height={400} offset={100}><img src={image1} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} /></LazyLoad>,
                 }
             ]
         },
@@ -86,7 +89,7 @@ const content = [
                 },
                 {
                     type: "custom",
-                    content: <img src={image2} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} />,
+                    content: <LazyLoad height={400} offset={100}><img src={image2} alt="img" style={{ position: "absolute", left: "0", top: "-100px", width: "100%", transform: "translateX(47vw)" }} /></LazyLoad>,
                 }
             ]
         },
@@ -149,13 +152,13 @@ const content = [
 const Sprint0 = () => {
     return (
         <div className="container">
-            <div className="textarea">
-                {content.map((item) => (
-                    item.map((thing) => (
-                        parser(thing)
-                    ))
-                ))}
-            </div>
+                <div className="textarea">
+                    {content.map((item) => (
+                        item.map((thing) => (
+                            parser(thing)
+                        ))
+                    ))}
+                </div>
             <div className="visuals">
                 {/* <img src={image1} alt="wireframe" style={{ width: "40vw", top: "15vh", position: "relative" }} /> */}
                 {/* <img src={image2} alt="wireframe" style={{ width: "40vw", top: "75vh", position: "relative" }} /> */}

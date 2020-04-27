@@ -8,9 +8,9 @@ export const slice = createSlice({
   },
   reducers: {
     addQuestions: (state, action) => {
-      console.log(action.payload);
+      // console.log(action.payload);
       state.questions = action.payload;
-      console.log(state.questions);
+      // console.log(state.questions);
     },
     clearQuestions: (state) => {
       state.questions = null;
