@@ -26,10 +26,10 @@ const b = document.querySelector('#b');
 const btn = document.querySelector('button');
 const prnt = document.querySelector('div');`;
 
-const example4JS = `const a = document.querySelector('#a');
-const b = document.querySelector('#b');
-const btn = document.querySelector('button');
-const prnt = document.querySelector('div')`;
+// const example4JS = `const a = document.querySelector('#a');
+// const b = document.querySelector('#b');
+// const btn = document.querySelector('button');
+// const prnt = document.querySelector('div')`;
 
 const example5JS = `const a = document.querySelector('#a');
 const b = document.querySelector('#b');

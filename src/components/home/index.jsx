@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { addQuestionsAsync } from '../quiz/quizSlice';
 import Quiz from '../quiz';
 
@@ -169,11 +170,16 @@ const Home = () => {
     }, []);
     
     return (
-        <div style={{ 
+        <motion.div 
+            style={{ 
             display: "grid",
             gridTemplateColumns: "max(50vw, 700px) 1fr",
             justifyItems: "center", }}>
-            <div 
+            <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, type: "tween" }}
                 style={{ 
                     overflowY: "scroll",
                     width: "100%",
@@ -183,11 +189,16 @@ const Home = () => {
                 {
                     tasks.map((task) => <Sprint task={task} />)
                 }
-            </div>
-            <div style={{ position: "relative", gridColumn: "2 / 3", }}>
+            </motion.div>
+            <motion.div
+                initial={{ x: "20vw" }}
+                animate={{ x: 0 }}
+                exit={{ x: "20vw" }}
+                transition={{ duration: 0.3, type: "tween" }}
+                style={{ position: "relative", gridColumn: "2 / 3", }}>
                 <Quiz />
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 };
 

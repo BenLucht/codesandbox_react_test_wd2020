@@ -1,7 +1,7 @@
 // <button onClick={() => dispatch(addQuestionsAsync())}>load ..</button>
 import React, { useLayoutEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { addQuestionsAsync, selectQuestions } from '../quiz/quizSlice';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { addQuestionsAsync, selectQuestions } from '../quiz/quizSlice';
 import AnswerButton from './AnswerButton';
 
 const QuestionCard = ({ number, questionData }) => {
@@ -10,13 +10,13 @@ const QuestionCard = ({ number, questionData }) => {
     const [shuffledAnswers, setShuffledAnswers] = useState(null);
     const [hovered, setHovered] = useState(false);
 
-    const { category, difficulty, question, correct_answer, incorrect_answers } = questionData;
+    const { category, question, correct_answer, incorrect_answers } = questionData;
 
     useLayoutEffect(() => {
         setShuffledAnswers(shuffleAnswers(correct_answer, incorrect_answers));
         // shuffleAnswers(correct_answer, incorrect_answers);
         // console.log(answers)
-    }, []);
+    }, [correct_answer, incorrect_answers]);
 
     const shuffleAnswers = (correct_answer, incorrect_answers) => {
         let answers = incorrect_answers.slice()
@@ -25,6 +25,22 @@ const QuestionCard = ({ number, questionData }) => {
 
         return answers
     };
+
+    const unescapeHtml = (safe) => {
+        return safe.replace(/&amp;/g, '&')
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&quot;/g, '"')
+            .replace(/&#039;/g, "'")
+            .replace(/&rsquo;/g, "'")
+            .replace(/&lsquo;/g, "'")
+            .replace(/&ldquo;/g, "'")
+            .replace(/&rdquo;/g, "'")
+            .replace(/&hellip;/g, "...")
+            .replace(/&lrm;/g, "")
+            .replace(/&rlm;/g, "")
+            .replace(/&shy;/g, "-");
+    }
     
     return (
         <div 
@@ -59,7 +75,7 @@ const QuestionCard = ({ number, questionData }) => {
                 fontSize: "1rem",
                 padding: "1rem"
             }}>
-                {question}
+                {unescapeHtml(question)}
             </p>
             <div style={{ 
                         width: "100%", 

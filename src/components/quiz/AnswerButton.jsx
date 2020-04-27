@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './AnswerButton.css';
 
 const AnswerButton = ({ answer, disabled, setDisabled, correctAnswer }) => {
@@ -9,11 +9,26 @@ const AnswerButton = ({ answer, disabled, setDisabled, correctAnswer }) => {
     const correctClass = clicked && correctAnswer;
     const falseClass = clicked && !correctAnswer;
     const otherCorrect = !clicked && disabled && correctAnswer;
-    const otherFalse = !clicked && disabled && !correctAnswer;
+    // const otherFalse = !clicked && disabled && !correctAnswer;
 
     const bgColor = disabled ? correctClass ? "green" : falseClass ? "red" : otherCorrect ? "green" : "gray" : hovered ? "rgb(60,78,224)" : ""
     const txColor = disabled ? correctClass ? "white" : falseClass ? "white" : otherCorrect ? "white" : "white" : hovered ? "white" : "black"
 
+    const unescapeHtml = (safe) => {
+        return safe.replace(/&amp;/g, '&')
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&quot;/g, '"')
+            .replace(/&#039;/g, "'")
+            .replace(/&rsquo;/g, "'")
+            .replace(/&lsquo;/g, "'")
+            .replace(/&ldquo;/g, "'")
+            .replace(/&rdquo;/g, "'")
+            .replace(/&hellip;/g, "...")
+            .replace(/&lrm;/g, "")
+            .replace(/&rlm;/g, "")
+            .replace(/&shy;/g, "-");
+    }
     // if (disabled) {
     //     if (correctClass) {
     //         return "green"
@@ -36,6 +51,7 @@ const AnswerButton = ({ answer, disabled, setDisabled, correctAnswer }) => {
                 pointerEvents: disabled ? "none": "",
                 boxShadow: "10px 10px 30px -20px rgba(0,0,0,0.15)",
                 transition: "background-color 350ms ease-in-out, color 50ms ease-in-out",
+                cursor: "pointer",
              }}
             disabled={disabled} 
             onClick={() => {
@@ -45,7 +61,7 @@ const AnswerButton = ({ answer, disabled, setDisabled, correctAnswer }) => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
-            {answer}
+            {unescapeHtml(answer)}
         </div>
     )
 };

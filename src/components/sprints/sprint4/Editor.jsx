@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect, useRef } from 'react';
+import React, { Component } from 'react';
 import { Controlled as CodeMirror } from 'react-codemirror2';
 
 import './editor.css';
@@ -103,11 +103,11 @@ class Editor extends Component {
     }
 
     syncUpdates = () => {
-        const data = { ...this.state };
+        // const data = { ...this.state };
       };
   
     runCode = () => {
-      const { html, css, js } = this.state;
+      const { html, css } = this.state;
   
       const iframe = this.refs.iframe;
       const document = iframe.contentDocument;
@@ -157,7 +157,7 @@ class Editor extends Component {
     };
   
     render() {
-      const { html, js, css } = this.state;
+      const { html } = this.state;
       const codeMirrorOptions = {
         theme: 'material',
         lineNumbers: true,

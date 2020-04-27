@@ -3,7 +3,7 @@ import Iframe from 'react-iframe';
 import ReactJson from 'react-json-view';
 import { Link } from 'react-router-dom';
 
-import MiniBrowser from './sprints/sprint4/MiniBrowser';
+// import MiniBrowser from './sprints/sprint4/MiniBrowser';
 import { ReactComponent as Summit } from './summit.svg';
 
 const parser = ({ type, content }) => {

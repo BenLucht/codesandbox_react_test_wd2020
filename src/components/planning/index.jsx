@@ -7,14 +7,10 @@ import {ReactComponent as FigmaLogo} from './images/figma_logo.svg';
 import {ReactComponent as AdobexdLogo} from './images/adobexd_logo.svg';
 import {ReactComponent as InvisionLogo} from './images/invision_logo.svg';
 import {ReactComponent as SketchLogo} from './images/sketch_logo.svg';
-
 import wireframeWatercolor from "./images/wireframe_watercolor.jpg";
-import wireframeWoman from "./images/wireframe_woman.jpg";
-import wireframeBlank from "./images/wireframe_blank.jpg";
 import wireframeUndrawPlayer from "./images/undraw_media_player.png";
 import wireframeWireframe from "./images/undraw_mobile_wireframe.png";
 import wireframeUserFlow from "./images/undraw_user_flow.png";
-import wireframeSearch from "./images/undraw_people_search.png";
 
 const content = [
     [

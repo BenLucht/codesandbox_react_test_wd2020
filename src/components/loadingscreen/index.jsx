@@ -7,7 +7,7 @@ const LoadingScreen = () => {
         <div style={{ display: "grid", gridTemplateRows: "70% 30%", alignItems: "center", justifyContent: "center", padding: "5vw" }}>
             <img 
                 src={imageLoad} 
-                alt="loading image"
+                alt="loading drawing"
                 style={{
                     width: "40vw"
                 }} />

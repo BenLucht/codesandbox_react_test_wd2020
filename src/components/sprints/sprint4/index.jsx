@@ -1,8 +1,7 @@
 import React from 'react';
-import Iframe from 'react-iframe';
-import ReactJson from 'react-json-view';
+// import ReactJson from 'react-json-view';
 
-import MiniBrowser from './MiniBrowser';
+// import MiniBrowser from './MiniBrowser';
 import parser from '../../parser';
 
 import '../style.css';

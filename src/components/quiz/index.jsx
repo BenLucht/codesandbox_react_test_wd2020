@@ -18,7 +18,7 @@ const Quiz = () => {
             overflowY: "hidden",
             overflowX: "hidden", 
             position: "sticky",
-            background: "rgb(60, 78, 224)",
+            // background: "rgb(60, 78, 224)",
             background: "linear-gradient(170deg, rgba(60,78,224,1) 0%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%)",
         }}>
             <div style={{

@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactRough, { Rectangle } from 'react-rough';
+// import ReactRough, { Rectangle } from 'react-rough';
 
 import './getcoding.css';
 
 import MiniBrowser from "./MiniBrowser";
-import Editor from "./Editor";
+// import Editor from "./Editor";
 
-import htmlLaptop from "./images/html_laptop.jpg";
+// import htmlLaptop from "./images/html_laptop.jpg";
 import undrawHtmlCss from "./images/undraw_html_css.png";
 import undrawCoder from "./images/undraw_coder.png";
 import undrawExpDesign from "./images/undraw_experience_design.png";
@@ -134,24 +134,24 @@ const list4 = [
     },
 ];
 
-const example1 = "";
-const example2 = {
-    html: `<h1>Test</h1>`,
-    css: false,
-}
-const example3 = {
-    html: `<h3>Headline</h3>
-<p>A paragraph about CSS</p>
-<div class="box"></div>`,
-    css: `h3 {
-    color: rgb(60, 78, 224);
-}
-.box {
-    height: 30px;
-    width: 40px;
-    background-color: green;
-}`,
-};
+// const example1 = "";
+// const example2 = {
+//     html: `<h1>Test</h1>`,
+//     css: false,
+// }
+// const example3 = {
+//     html: `<h3>Headline</h3>
+// <p>A paragraph about CSS</p>
+// <div class="box"></div>`,
+//     css: `h3 {
+//     color: rgb(60, 78, 224);
+// }
+// .box {
+//     height: 30px;
+//     width: 40px;
+//     background-color: green;
+// }`,
+// };
 const exampleM = {
     html: `<h1>Headline One</h1>
 <h1 style="color: red;">Headline Two</h1>
@@ -259,7 +259,7 @@ const GetCoding = () => {
                 className="sprint0__container" 
             >
                 <p>
-                    <img className="wireframe_undraw_player" src={undrawHtmlCss} />
+                    <img className="wireframe_undraw_player" src={undrawHtmlCss} alt="design drawing" />
                 </p>
                 <h3>
                     What is HTML
@@ -275,7 +275,7 @@ const GetCoding = () => {
                 </h3>
                 <p>
                     After this brief and exciting introduction, we can dive right into it. When working with HTML, we use simple code structures, tags and attributes, to mark up a website page. The first version of HTML contained 18 different tags, many of them still the foundation of every website to this day. Those are:
-                    <img className="wireframe_undraw_player" src={undrawCoder} />
+                    <img className="wireframe_undraw_player" src={undrawCoder} alt="design drawing" />
                 </p>
                 <ul>
                     {list1.map((element) => ( <li><span className="tag">{element.name}</span> - {element.text}</li> ))}
@@ -289,7 +289,7 @@ const GetCoding = () => {
                 </ul>
                 <p>
                     Other commonly used and useful tags, because they describe their contents semantically:
-                    <img className="wireframe_undraw_player" src={undrawExpDesign} />
+                    <img className="wireframe_undraw_player" src={undrawExpDesign} alt="design drawing" />
                 </p>
                 <ul>
                     {list3.map((element) => ( <li><span className="tag">{element.name}</span> - {element.text}</li> ))}
@@ -325,7 +325,7 @@ const GetCoding = () => {
                 </p>
                 <p>
                     CSS is created and maintained through a group of people within the W3C called the CSS Working Group. The CSS Working Group creates documents called specifications. When a specification has been discussed and officially ratified by the W3C members, it becomes a recommendation. These ratified specifications are called recommendations because the W3C has no control over the actual implementation of the language. Independent companies and organizations create that software. Due to this circumstance not all web browsers support the same styles or interpret stylings in slightly different ways. Infamously Microsofts attempt at a unified web experience called Internet Explorer caused tremendous problems that had to be solved by implementing a separate set of instructions specifically for it. Some developers simply checked which browser was used and prompted users of the Internet Explorer to please use a different web browser. The implementation status of styles can be checked easily at caniuse.com. 
-                    <img className="wireframe_undraw_player" src={undrawRedesign} />
+                    <img className="wireframe_undraw_player" src={undrawRedesign} alt="design drawing" />
                 </p>
                 <p>
                     These styles can be defined inside the HTML tags in the form of „style“-data.
@@ -427,7 +427,7 @@ const GetCoding = () => {
                 </ul>
                 <p>
                     CSS is based on the so-called box model: every element is a box. So it it boxes inside boxes and boxes all the way down. That is a rigid assumption, but it makes understanding how things are related to each other very simple. Of course it is easier to to understand when looking at it 
-                    <img className="wireframe_undraw_player" src={undrawWIP} />
+                    <img className="wireframe_undraw_player" src={undrawWIP} alt="design drawing" />
                 </p>
                 <p>
                     <img style={{ width: "42vw" }} src="https://cs.pwr.edu.pl/cichon/2017_18_b/WWW/box_model.png" alt="centering meme" />
