@@ -173,6 +173,8 @@ table {
     margin-left: 10%;
     text-align: left;
     box-shadow: 19px 10px 50px -30px rgba(0,0,0,0.05);
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 th {
