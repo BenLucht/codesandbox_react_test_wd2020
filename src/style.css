@@ -167,3 +167,40 @@ ul li:before
     height: 500px;
     transform: translateX(50vw);
 }
+
+table {
+    width: 80%;
+    margin-left: 10%;
+    text-align: left;
+    box-shadow: 19px 10px 50px -30px rgba(0,0,0,0.05);
+}
+
+th {
+    padding: 1rem;
+}
+
+th:nth-of-type(1) {
+    border-radius: 10px 0 0 0;
+}
+
+th:nth-of-type(2) {
+    border-radius: 0 10px 0 0;
+}
+
+td {
+    padding: 0.5rem 1rem;
+}
+
+.course-table-head {
+    background-color: rgba(60, 78, 224, 1);
+    color: white;
+    
+}
+
+.course-table-row-bright {
+    background-color: rgba(60, 78, 224, 0.05);
+}
+
+.course-table-row-dark {
+    background-color: rgba(60, 78, 224, 0.15);
+}

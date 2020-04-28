@@ -1,11 +1,15 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
 import parser from '../../parser';
+import MiniBrowser from '../../jsgeneral/MiniBrowser';
 
 import '../style.css';
 
 import image1 from "./images/undraw_pair_programming_njlp.png";
 import image2 from "./images/undraw_code_review_l1q9.png";
+
+const example1HTML = `sdfg`;
+const example1JS = `sdg`;
 
 const content = [
     [
@@ -129,11 +133,16 @@ const content = [
         },
         {
             type: "p",
-            content: `As you remember from last “Sprint” we can access the values through dot notation. When we save this data to a variable “question”, “question.category” will give us “Science & Nature”. When using this data structure in JavaScript, it allows us to create the same HTML markup but gives us more options to be creative, like randomizing answers, etc. Let's look at our example:`,
+            content: `As you remember from last “Sprint” we can access the values through dot notation. When we save this data to a variable “question”, “question.category” will give us “Science & Nature”. When using this data structure in JavaScript, it allows us to create the same HTML markup but gives us more options to be creative, like randomizing answers, etc. Let's look at an example:`,
         },
         {
             type: "p",
-            content: `example`,
+            content: [
+                {
+                    type: "custom",
+                    content: <div style={{ position: "", top: "50px", transform: "translateX()" }}><MiniBrowser exampleCode={{ html: example1HTML, css: null, js: example1JS }} /></div>,
+                },
+            ],
         },
         {
             type: "p",

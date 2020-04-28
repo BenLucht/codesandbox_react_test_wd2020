@@ -80,7 +80,7 @@ const MiniBrowser = ({ exampleCode }) => {
                     </div>
                     <div style={{ 
                         borderRadius: "1rem",
-                        display: "grid",
+                        // display: "grid",
                         gridTemplateColumns: "1fr 1fr",
                     }}>
                         <Editor code={exampleCode} />
