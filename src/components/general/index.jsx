@@ -17,7 +17,7 @@ const content = [
             content: [
                 {
                     type: "text",
-                    content: `More than anyhting, this is just a quick summary of what you already know. Below you will find a short description of what CodeSandbox is and how to use it for the project aswell as the curriculum for the semester depending on the level you think you should take.`,
+                    content: `More than anyhting else, this is just a quick summary of what you already know. Below you will find a short description of what CodeSandbox is and how to use it for the project aswell as the curriculum for the semester depending on the level you think you should take.`,
                 },
                 {
                     type: "custom",
